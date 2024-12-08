@@ -7,14 +7,11 @@ namespace ProtoBufDecoderWeb;
 
 internal sealed partial class Program {
     private static Task Main(string[] args) => BuildAvaloniaApp()
-            .StartBrowserAppAsync("out");
+        .StartBrowserAppAsync("out");
 
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<App>()
             .With(new FontManagerOptions {
-                DefaultFamilyName = "avares://ProtoBufDecoderWeb/Assets/Fonts/Inconsolata#Inconsolata",
-                FontFallbacks = [new FontFallback {
-                    FontFamily = new("avares://ProtoBufDecoderWeb/Assets/Fonts/Noto Sans SC#Noto Sans SC")
-                }]
+                DefaultFamilyName = "avares://ProtoBufDecoderWeb/Assets/Fonts#Maple Mono NL CN",
             });
 }
