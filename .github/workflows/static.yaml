@@ -37,6 +37,8 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Publish
+        env:
+          NuGetPackageSourceCredentials_darkrrb_github: Username=DarkRRb;Password=${{ secrets.DARKRRB_PACKAGES_READONLY_TOKEN }}
         run: dotnet publish ProtoBufDecoderWeb
 
       - name: Setup Pages
